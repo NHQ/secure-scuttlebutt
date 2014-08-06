@@ -1,0 +1,6 @@
+var memDB = require('memdb')
+var sublevel = require('level-sublevel')
+var SSB = require('./')
+var sublevel = require('level-sublevel/bytewise')
+var opts = require('./defaults')
+var ssb = SSB(sublevel(memDB({valueEncoding: opts}), opts))
